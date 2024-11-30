@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>June’s Web</title>
+ 
+<style> 
+body {background-color:#ffffbf5;width:400px;}
+
+.border{background-color:#ffd3d3;height:500px;border-radius:7px; width:400px;} 
+.space {display:flex; justify-content:space-evenly;background-color:#A58E85;width:400px;height:25px;}
+.menu {width:50px;background-color:#FBE9E7;color:#A58E85;border-style:outset;}
+.background-div {width: 35px;height: 25px;background-image: url('pup.gif');background-size:cover;}
+.idk {width: 400px;height:295px;background-image: url('board.png');background-size:cover;}
+.banner{width:400px;height: 170px;background-image: url('toppy.png');background-size:cover;}
+.button{border-style:inset;border-color:#D3C9C5}
+#popup {display: none;position: fixed; top:50%;left:35%;transform: translate(-50%, -50%);background-color:white;border: 2px solid #ccc;padding: 20px;box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);z-index: 1000;}
+#overlay {display: none;position: fixed;top: 0;left: 0;width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);z-index: 999;}
+.group{display:flex;}
+.star {background-color:white;width:202px;height:260px;margin-left:22px;border-radius:6px;}
+.heart {text-align:center;background-color:white;width:165px;height:60px;margin-left:4px;border-radius:6px;}
+
+</style> 
+
+<body>
+<div class="border">
+
+<section class="space"> 
+ <div class="background-div"> </div>
+ <button class="button" id="openPopupBtn"> <div class="menu">Intro </div> </button>
+ <button class="button"> <div class="menu">Intrests </div> </button>
+ <button class="button"> <div class="menu">Favs </div> </button>
+ <button class="button"> <div class="menu">Diary </div> </button>
+</section>
+
+<section>
+<div class="banner"></div>
+</section>
+
+<section>
+<div class=idk>
+
+  <div id="popup">
+    <h2>Intro!!</h2>
+    <p>Welcome made this site with html javascript and pintrest. </p>
+    <button id="closePopupBtn">Close</button>
+  </div>
+<br>
+ <div id="overlay"></div>
+ 
+ <div class="group">
+<div class="star"> gyatt</div>
+<div class="heart"> <p style="color:grey">follow me? ifb Insta - ibepissin09 </p></div>
+ </div>
+
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script> 
+// Get references to the button and the popup
+    const openPopupBtn = document.getElementById('openPopupBtn');
+    const closePopupBtn = document.getElementById('closePopupBtn');
+    const popup = document.getElementById('popup');
+    const overlay = document.getElementById('overlay');
+
+    openPopupBtn.addEventListener('click', () => {
+      popup.style.display = 'block';
+      overlay.style.display = 'block';
+    });
+
+    closePopupBtn.addEventListener('click', () => {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+    overlay.addEventListener('click', () => {
+      popup.style.display = 'none';
+      overlay.style.display = 'none';
+    });
+  </script>
+
+</div>
+</body>
+</html>
